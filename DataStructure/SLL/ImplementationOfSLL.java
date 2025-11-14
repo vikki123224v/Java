@@ -1,10 +1,11 @@
-class Node{
+class Node{//node class implementation
     int data;
     Node next;
     Node(int data){
         this.data=data;
     }
 }
+//SLL class implementation 
 class SLL{
     Node head;
     Node tail;
@@ -13,6 +14,7 @@ class SLL{
         tail=null;
 
     }
+    //insert function
     public void insert(int data){
         Node hello=new Node(data);
         if(head==null)
@@ -25,6 +27,7 @@ class SLL{
             tail=hello;
         }
         }
+        //search function
         public void search(int val){
              Node n=head;
              int p=0;
@@ -42,6 +45,22 @@ class SLL{
             System.out.println("Value not found");
         }
         }
+        //delete function
+    public void delete(int tar){
+        if(head.data==tar){
+            head=head.next;
+        }
+        else{
+            Node n=head;
+            while(n.next!=null &&n.next.data!=tar){
+                n=n.next;
+            }
+            n.next=n.next.next;
+        }
+
+    }
+
+        //display function
     public void display(){
         Node n=head;
         while(n!=null){
@@ -67,6 +86,8 @@ class SLL{
             System.out.println();
             o.search(100);
             o.search(10);
+            o.delete(10);
+            o.display();
 
 
         }
