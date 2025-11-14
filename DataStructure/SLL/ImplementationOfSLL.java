@@ -25,6 +25,23 @@ class SLL{
             tail=hello;
         }
         }
+        public void search(int val){
+             Node n=head;
+             int p=0;
+        while(n!=null){
+            if(n.data==val){
+               p=1;
+               break;
+            }
+            n=n.next;
+        }
+        if(p==1){
+            System.out.println("Value found");
+        }
+        else{
+            System.out.println("Value not found");
+        }
+        }
     public void display(){
         Node n=head;
         while(n!=null){
@@ -47,6 +64,9 @@ class SLL{
             o.insert(30);
             o.insert(40);
             o.display();
+            System.out.println();
+            o.search(100);
+            o.search(10);
 
 
         }
