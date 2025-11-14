@@ -26,6 +26,7 @@ class CDLL{
         System.out.println();
         dis2(tail,head);
     }
+    
     public static void dis1(Node head, Node tail){
         Node n=head;
         do{
