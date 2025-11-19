@@ -46,19 +46,31 @@ class SLL{
         }
         }
         //delete function
+    // public void delete(int tar){
+    //     if(head.data==tar){
+    //         head=head.next;
+    //     }
+    //     else{
+    //         Node n=head;
+    //         while(n.next!=null &&n.next.data!=tar){
+    //             n=n.next;
+    //         }
+    //         n.next=n.next.next;
+    //     }
+
+    // }
     public void delete(int tar){
         if(head.data==tar){
             head=head.next;
         }
         else{
             Node n=head;
-            while(n.next!=null &&n.next.data!=tar){
-                n=n.next;
+            while(n.next.data!=tar){
+               n=n.next;
+                }
+                n.next=n.next.next;
             }
-            n.next=n.next.next;
         }
-
-    }
 
         //display function
     public void display(){
