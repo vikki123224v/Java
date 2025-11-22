@@ -51,7 +51,28 @@ public boolean search(int key){
         }
         return false;
         }
-    }
+        public void Delete(int item){
+            if(head.data==item){
+                head=head.next;
+                head.prev=null;
+            }
+            else if(tail.data==item){
+                tail=tail.prev;
+                tail.next=null;
+            }
+            else{
+                Node n=head;
+                while(n.next!=null &&n.next.data!=item){
+                    n=n.next;
+                }
+                if(n.next!=null){
+                n.next=n.next.next;
+                n.next.prev=n;
+            }
+            
+            }
+        }
+}
 
 public class ImplementationOfDLL{
     public static void main(String[] args) {
@@ -66,6 +87,19 @@ public class ImplementationOfDLL{
         System.out.println();
         System.out.println(o.search(20));
         System.out.println(o.search(100));
-
+        o.Delete(10);
+        o.dis1();
+        System.out.println();
+        o.dis2();
+        o.Delete(50);
+        System.out.println();
+        o.dis1();
+        System.out.println();
+        o.dis2();
+        o.Delete(30);
+        System.out.println();
+        o.dis1();
+        System.out.println();
+        o.dis2();
     }
 }
