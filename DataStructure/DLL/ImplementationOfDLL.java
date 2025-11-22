@@ -101,5 +101,7 @@ public class ImplementationOfDLL{
         o.dis1();
         System.out.println();
         o.dis2();
+        o.Delete(100);
+        o.dis1();
     }
 }
